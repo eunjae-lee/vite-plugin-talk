@@ -394,9 +394,12 @@ console.log('hi', usernames)
 layout: center
 ---
 
-# Thank You!
+<h1 class="text-center">Thank You!</h1>
 
-<div class="ml-2 flex items-center gap-2">
+<div class="flex justify-center items-center gap-2">
   <Twitter class="w-8" />
   <a href="https://twitter.com/eunjae_lee">@eunjae-lee</a>
+</div>
+<div class="flex justify-center">
+  <img class="w-48" src="/qrcode.png" />
 </div>
