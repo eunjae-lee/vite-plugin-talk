@@ -121,6 +121,10 @@ transition: none
   <img v-click src="/dist.png" class="w-48 -mt-16" />
 </div>
 
+<!--
+1:00
+-->
+
 ---
 
 # Rollup
@@ -153,11 +157,13 @@ console.log("Hello World")
 transition: none
 ---
 
-# Rollup / Vite Plugin
+# Examples
 
-<h2 class="mt-24">@vitejs/plugin-vue</h2>
-<h2 class="mt-16">@vitejs/plugin-react</h2>
-<h2 class="mt-16">@remix-run/dev</h2>
+<ul class="text-3xl mt-16 space-y-12">
+  <li v-click>@vitejs/plugin-vue</li>
+  <li v-click>@vitejs/plugin-react</li>
+  <li v-click>@remix-run/dev</li>
+</ul>
 
 ---
 transition: none
@@ -190,6 +196,10 @@ transition: none
   --prism-font-size: 1.3em;
 }
 </style>
+
+<!--
+2:00
+-->
 
 ---
 transition: none
@@ -236,6 +246,10 @@ transition: none
   <span>load</span>
   <span v-click class="!text-2xl"> = (id) => string | null | ..</span>
 </h1>
+
+<!--
+2:50
+-->
 
 ---
 
@@ -358,6 +372,10 @@ return
 
 https://jsonplaceholder.typicode.com
 
+<!--
+3:40
+-->
+
 ---
 
 # Example
@@ -433,6 +451,10 @@ console.log('hi', usernames)
   <li v-click>it's okay to process the data on the build time</li>
 </ul>
 
+<!--
+4:15
+-->
+
 ---
 
 # Example: a virtual module
@@ -461,6 +483,10 @@ console.log('hi', usernames)
   --prism-font-size: 1.5rem !important;
 }
 </style>
+
+<!--
+5:00
+-->
 
 ---
 
