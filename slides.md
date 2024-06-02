@@ -352,17 +352,101 @@ return
 
 ---
 
+# Example
+
+<img class="w-64" src="/typicode.png" />
+
+https://jsonplaceholder.typicode.com
+
+---
+
+# Example
+
+https://jsonplaceholder.typicode.com/users
+
+```json {all|5}
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+```
+
+<style>
+.slidev-code-wrapper {
+  --prism-font-size: 1.3rem !important;
+}
+</style>
+
+---
+
+# Example
+
+```js {1-3|4|5|6}
+const response = await fetch(
+  'https://jsonplaceholder.typicode.com/users'
+)
+const json = await response.json()
+const usernames = json.map(user => user.username)
+console.log('hi', usernames)
+```
+
+<style>
+.slidev-code-wrapper {
+  --prism-font-size: 1.5rem !important;
+}
+</style>
+
+---
+
+# Example
+
+```js {5}
+const response = await fetch(
+  'https://jsonplaceholder.typicode.com/users'
+)
+const json = await response.json()
+const usernames = performHeavyLogic(json)
+console.log('hi', usernames)
+```
+
+<style>
+.slidev-code-wrapper {
+  --prism-font-size: 1.5rem !important;
+}
+</style>
+
+---
+
+# What if...
+
+<ul class="text-3xl mt-16 space-y-12">
+  <li v-click>the data doesn't change frequently</li>
+  <li v-click>it's okay to process the data on the build time</li>
+</ul>
+
+---
+
 # Example: a virtual module
 
 <h2 v-click class="mt-32">It doesn't exist at package.json</h2>
 <h2 v-click class="mt-16">but it works somehow.</h2>
 
 ---
+transition: none
+---
 
 # Example: a virtual module
 
-<div class="h-8"></div>
+<div class="h-4"></div>
 
+code:
 ```js
 import { usernames } from 'my-build-time-library'
 
@@ -378,15 +462,52 @@ console.log('hi', usernames)
 
 ---
 
+# Example: a virtual module
+
+<div class="h-4"></div>
+
+code:
+```js
+import { usernames } from 'my-build-time-library'
+
+console.log('hi', usernames)
+```
+
+output:
+```js
+// dist/index.js
+
+console.log('hi', ['Eunjae', 'Minji', ...])
+```
+
+
+<style>
+.slidev-code-wrapper {
+  --prism-font-size: 1.5rem !important;
+}
+</style>
+
+---
+
 <Youtube id="MyoSJpW1SnI" />
 
 ---
 
-# In this example, we
+# In this example,
 
-<h2 v-click class="mt-16 !text-4xl opacity-50">did more on build time.</h2>
-<h2 v-click class="mt-12 !text-4xl opacity-50">shipped only result, not business logic.</h2>
-<h2 v-click class="mt-16">Thus, faster and smaller runtime.</h2>
+<h2 v-click class="mt-16 !text-4xl">We did more on build time.</h2>
+<h2 v-click class="mt-12 !text-4xl">We shipped only result, not business logic.</h2>
+
+---
+
+# Use-cases
+
+<ul class="text-3xl mt-16 space-y-6">
+  <li v-click>heavy work or reading confidential endpoints, etc.</li>
+  <li v-click>git related info (current commit, branch, etc.)</li>
+  <li v-click>Code generation</li>
+  <li v-click>Domain-specific language</li>
+</ul>
 
 ---
 
