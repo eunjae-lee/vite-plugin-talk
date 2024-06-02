@@ -385,7 +385,7 @@ https://jsonplaceholder.typicode.com/users
 </style>
 
 ---
-trasition: none
+transition: none
 ---
 
 # Example
