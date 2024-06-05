@@ -2,7 +2,6 @@
 # try also 'default' to start simple
 theme: seriph
 # https://unsplash.com/photos/assorted-building-blocks-lot-j2SMpBxAOkY
-background: ./ryan-quintal-j2SMpBxAOkY-unsplash.jpg
 # some information about your slides, markdown enabled
 title: Writing Your First Vite Plugin
 info: |
@@ -21,11 +20,23 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 colorSchema: light
+layout: center
 ---
+
+<div>
+  <img class="w-64" src="/vite.png" />
+</div>
+
+---
+layout: cover
+background: ./ryan-quintal-j2SMpBxAOkY-unsplash.jpg
+---
+
 
 # Writing Your<br/>First Vite Plugin
 
 by Eunjae Lee
+
 
 ---
 layout: image-right
@@ -62,14 +73,6 @@ layout: center
   <img v-click class="h-16" src="/algolia.png" />
   <img v-click class="h-18" src="/storyblok.png" />
   <img v-click class="right-12 -bottom-24 absolute h-12 opacity-50" src="/storybook.png" />
-</div>
-
----
-layout: center
----
-
-<div>
-  <img class="w-64" src="/vite.png" />
 </div>
 
 ---
@@ -120,6 +123,12 @@ transition: none
 
   <img v-click src="/dist.png" class="w-48 -mt-16" />
 </div>
+
+<ul class="absolute right-36 bottom-24">
+  <li v-click>Tree-Shaking</li>
+  <li v-click>Avoid network waterfalls</li>
+  <li v-click>...</li>
+</ul>
 
 <!--
 1:00
@@ -528,14 +537,27 @@ console.log('hi', ['Eunjae', 'Minji', ...])
 
 ---
 
-# Use-cases
+# Benefits
 
 <ul class="text-3xl mt-16 space-y-6">
-  <li v-click>heavy work or reading confidential endpoints, etc.</li>
-  <li v-click>git related info (current commit, branch, etc.)</li>
-  <li v-click>Code generation</li>
+  <li v-click>heavy computation</li>
+  <li v-click>git-related info (current commit, branch, etc.)</li>
+  <li v-click>Local files (*.md, file-based routings, etc.)</li>
   <li v-click>Domain-specific language</li>
 </ul>
+
+---
+
+<h1 class="mt-12 text-center">Challenge</h1>
+
+<div v-click class="flex justify-center">
+  <div>
+    <div>
+      <img class="w-64" src="/qrcode.png" />
+    </div>
+    <p class="text-primary font-bold">eunjae.dev/en/vite-plugin-talk</p>
+  </div>
+</div>
 
 ---
 
@@ -545,10 +567,7 @@ layout: center
 
 <h1 class="text-center">Thank You!</h1>
 
-<div class="flex justify-center items-center gap-2">
+<div class="-ml-4 flex justify-center items-center gap-2">
   <Twitter class="w-8" />
   <a href="https://twitter.com/eunjae_lee">@eunjae-lee</a>
-</div>
-<div class="flex justify-center">
-  <img class="w-48" src="/qrcode.png" />
 </div>
