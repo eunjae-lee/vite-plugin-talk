@@ -525,6 +525,12 @@ console.log('hi', ['Eunjae', 'Minji', ...])
 </style>
 
 ---
+layout: center
+---
+
+# Live Coding
+
+---
 
 <Youtube id="MyoSJpW1SnI" />
 
